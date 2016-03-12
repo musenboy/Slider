@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JQuery轮播插件示例</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+	<script type="text/javascript" src="jquery.MmSlider.js"> </script>
+</head>
+<body>
+<div id="slidePic">
+	<ul>
+		<li>
+			<img src="http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1511/20/c0/15506864_1448031178561_800x600.jpg">
+		</li>
+		<li>
+			<img src="http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1508/25/c0/11717575_1440512560946_800x600.jpg">
+		</li>
+		<li>
+			<img src="http://img.pconline.com.cn/images/upload/upc/tx/wallpaper/1508/25/c0/11717579_1440512577657_800x600.jpg">
+		</li>
+	</ul>
+</div>
+</body>
+<script type="text/javascript">
+
+$(document).ready(function(){
+ 	var config={};
+	config.width = "1000";  //px
+	config.height = "500";  //px
+	config.slideTime = 4000; //毫秒
+	$('#slidePic').MMSlider(config);
+});
+
+</script>
+</html>
