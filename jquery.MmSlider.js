@@ -4,10 +4,15 @@
     jQuery.fn.MMSlider = function(config) {
 		//当前div
         var mmSlider=$(this); 
+        //宽度
+        var mmWidth = config.width; 
+        //高度
+        var mmHeight = config.height; 
+
         //div宽
-        mmSlider.css('width', config.width); 
+        mmSlider.css('width', mmWidth); 
         //div高
-        mmSlider.css('height', config.height);
+        mmSlider.css('height', mmHeight);
         //规定当前div内容溢出元素框时内容会被修剪，其余不可见
         mmSlider.css('overflow','hidden'); 
         //相对定位
@@ -19,27 +24,24 @@
             var ul = $(this).find('ul');
             ul.css('margin', "0");
             ul.css('padding', "0");
-            ul.css('width',config.width);
-            ul.css('height',config.height);
+            ul.css('width', mmWidth);
+            ul.css('height', mmHeight);
             ul.css('list-style',"none");
             ul.css('position','absolute');
 
             //设置li样式
             var li = $(this).find('li');
             li.css('float','left');
-            ul.css('list-style',"none");
             li.css('overflow','hidden');
             li.css('position','relative');
 
             //设置图片宽带和外层容器宽高相同
             var imgs = $(this).find('li').find('img');
-            imgs.css('width',config.width);
-            imgs.css('height',config.height);
+            imgs.css('width', mmWidth);
+            imgs.css('height', mmHeight);
            
         })
 
-        //宽度
-        var mmWidth = config.width; 
         //图片个数
         var len = mmSlider.find("ul li").length; 
         //记录当前显示图片的索引
